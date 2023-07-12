@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{%load static%}
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{%static 'css/loginstyle.css' %}">
+  </head>
+  <body>
+    <div class="center">
+      <h1>Register</h1>
+      <form method="post">
+        {%csrf_token%}
+        <div class="txt_field">
+          <input type="text" name="username" required>
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" name="password1" required>
+          <span></span>
+          <label>Password1</label>
+        </div>
+        <div class="txt_field">
+            <input type="password" name="password2" required>
+            <span></span>
+            <label>Password2</label>
+          </div>
+
+        <div class="pass">Forgot Password?</div>
+        <input type="submit" value="Login">
+        <div class="signup_link">
+          Already a member? <a href="{%url 'signin'%}">Signin</a>
+        </div>
+      </form>
+    </div>
+
+  </body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <form action="" method="post">
+                    {%csrf_token%}
+                    {{form.as_p}}
+                    <button type="submit">register</button>
+                </form>
+            </div>
+            <div class="col-4"></div>
+
+        </div>
+    </div>
+</body>
+</html> -->
